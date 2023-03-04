@@ -13,6 +13,7 @@ node_modules
 apps/**/build
 apps/**/dist
 **.tsbuildinfo
+packages/core-lib/build
 
 # misc
 .DS_Store

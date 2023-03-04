@@ -1,1 +1,1 @@
-export * as types from './types/socket';
+export * from './types/index.js';

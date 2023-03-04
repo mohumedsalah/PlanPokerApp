@@ -1,31 +1,34 @@
 import { FC, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import io from 'socket.io-client';
+import { io } from 'socket.io-client';
+
+import { socketEvent, socketListener } from '@core/lib';
+
 const room = 'HelloFromOtherSide';
 
 const VoteGame: FC = () => {
 	const socket = io('http://localhost:4000/poker');
 	const joinRoom = () => {
-		socket.emit('joinRoom', room);
+		socket.emit(socketEvent.JOIN_ROOM, room);
 	};
 
 	const voteMessage = () => {
-		socket.emit('vote', { room, sender: 'mo', rate: 3 });
+		socket.emit(socketEvent.VOTE, { room, sender: 'mo', rate: 3 });
 	};
 
 	const revertCards = () => {
-		socket.emit('revertCards', { room, sender: 'mo' });
+		socket.emit(socketEvent.REVERT_CARDS, { room, sender: 'mo' });
 	};
 
 	useEffect(() => {
-		socket.on('revertedCards', (data) => {
+		socket.on(socketListener.REVERTED_CARDS, (data) => {
 			console.log('cards need to revert with data', data);
 		});
-		socket.on('voted', (data) => {
+		socket.on(socketListener.VOTED, (data) => {
 			console.log('new vote for coming', data);
 		});
 
-		socket.on('joinedRoom', (data) => {
+		socket.on(socketListener.JOINED_ROOM, (data) => {
 			console.log('new one join for coming', data);
 		});
 	}, [socket]);
