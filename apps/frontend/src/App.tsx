@@ -6,6 +6,7 @@ import { store, persistor } from 'redux-store';
 import { Loading } from 'shared';
 import Routing from 'routes';
 import io from 'socket.io-client';
+import './index.css';
 
 const room = 'HelloFromOtherSide';
 
@@ -56,7 +57,7 @@ function App() {
 				</button>
 
 				<button
-					className="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+					className="mt-3 block bg-indigo-600 text-xl font-bold  text-white p-2"
 					onClick={revertCards}
 				>
 					revert cards
