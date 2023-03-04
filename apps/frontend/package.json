@@ -14,6 +14,8 @@
 		"@core/lib": "*",
 		"@emotion/react": "^11.10.0",
 		"@emotion/styled": "^11.10.0",
+		"@headlessui/react": "^1.7.13",
+		"@heroicons/react": "^2.0.16",
 		"@mui/icons-material": "^5.8.4",
 		"@mui/material": "^5.10.0",
 		"@reduxjs/toolkit": "^1.8.4",

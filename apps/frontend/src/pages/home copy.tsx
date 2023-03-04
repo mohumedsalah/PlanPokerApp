@@ -30,7 +30,6 @@ const Page1: FC = () => {
 			<Button variant="outlined" onClick={() => navigate('/page-2')}>
 				Go to Page2
 			</Button>
-			<div>Doubler Value: {rootStore.doubler.counterValue}</div>
 			<Button onClick={() => rootStore.doubler.increment()}>
 				Increment
 			</Button>
