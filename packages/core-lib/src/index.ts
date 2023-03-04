@@ -1,1 +1,1 @@
-export * from './ui';
+export * as types from './types/socket';
