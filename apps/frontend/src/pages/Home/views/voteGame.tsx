@@ -3,6 +3,10 @@ import { observer } from 'mobx-react-lite';
 import { io } from 'socket.io-client';
 
 import { socketEvent, socketListener } from '@core/lib';
+import PeopleSection from 'containers/home/voteGame/peopleSeciont';
+import RevertButton from 'containers/home/voteGame/RevertButton';
+import ResultSection from 'containers/home/voteGame/Result';
+import CardsSections from 'containers/home/voteGame/CardsSection';
 
 const room = 'HelloFromOtherSide';
 
@@ -33,27 +37,16 @@ const VoteGame: FC = () => {
 		});
 	}, [socket]);
 	return (
-		<div>
-			<button
-				className="mt-3 block bg-indigo-600 text-xl font-bold  text-white p-2"
-				onClick={joinRoom}
-			>
-				Join room
-			</button>
-
-			<button
-				className="mt-3 block bg-indigo-600 text-xl font-bold  text-white p-2"
-				onClick={voteMessage}
-			>
-				vote
-			</button>
-
-			<button
-				className="mt-3 block bg-indigo-600 text-xl font-bold  text-white p-2"
-				onClick={revertCards}
-			>
-				revert cards
-			</button>
+		<div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+			<div className="px-4 py-5 sm:px-6">
+				<PeopleSection />
+			</div>
+			<div className="px-4 py-5 sm:p-6">
+				<RevertButton />
+			</div>
+			<div className="px-4 py-4 sm:px-6">
+				<CardsSections />
+			</div>
 		</div>
 	);
 };
