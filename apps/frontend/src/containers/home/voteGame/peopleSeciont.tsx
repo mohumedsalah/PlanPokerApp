@@ -1,27 +1,24 @@
 import { FC } from 'react';
+import { Member } from 'types';
 
-const people = [
-	{
-		name: 'Omar',
-		imageUrl:
-			'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-	},
-	{
-		name: 'Omar',
-		imageUrl:
-			'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-	},
-	// More people...
-];
+interface PeopleSectionProps {
+	people: Member[];
+	flipped: boolean;
+}
 
-const PeopleSection: FC = () => {
+const PeopleSection: FC<PeopleSectionProps> = ({
+	people,
+	flipped,
+}: PeopleSectionProps) => {
 	return (
 		<div className="bg-white flex overflow-auto justify-center">
 			{people.map((person) => (
 				<div className="flex-row min-w-max">
 					<div>
 						<span className="relative inline-block mx-3 text-center">
-							<div className="h-20 w-16  rounded-md bg-blue-300" />
+							<div className="h-20 w-16  rounded-md bg-blue-300 flex justify-center items-center">
+								{person.rate && flipped ? person.rate : ''}
+							</div>
 							<span className="absolute top-0 right-0 block h-4 w-4 rounded-full bg-green-400 ring-2 ring-white" />
 						</span>
 					</div>
