@@ -1,0 +1,14 @@
+{
+	"site": {
+		"domain": "your-saas-domain.com",
+		"name": "Your Next Sass",
+		"title": "This will be great",
+		"description": "Sample website demostrating the look and feel of SasS starter template"
+	},
+	"author": {
+		"twitter": "Your Twitter handle"
+	},
+	"analytics": {
+		"googleAnalytics": ""
+	}
+}

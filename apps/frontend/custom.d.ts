@@ -1,0 +1,1 @@
+type Interval = 'year' | 'month';

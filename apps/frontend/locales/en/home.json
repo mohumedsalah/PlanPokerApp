@@ -1,0 +1,17 @@
+{
+	"title": "Build Your Next SaaS",
+	"description": "Use this template to build your next SaaS without hassle",
+	"join": "Join Now",
+	"benefit-1": {
+		"title": "Build",
+		"description": "Use template to build a basic SaaS structure with bare necessities."
+	},
+	"benefit-2": {
+		"title": "Customize",
+		"description": "Add or change features to build your product in mind."
+	},
+	"benefit-3": {
+		"title": "Deploy",
+		"description": "Deploy your application and get your first SaaS customers."
+	}
+}

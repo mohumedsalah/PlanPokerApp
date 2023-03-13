@@ -1,0 +1,11 @@
+{
+	"stripe-redirect": "You'll be redirected to Stripe",
+	"sign-in": "Sign In",
+	"to-app": "Go to App",
+	"links": {
+		"dashboard": "Dashboard",
+		"pricing": "Pricing",
+		"billing": "Billing",
+		"sign-out": "Sign Out"
+	}
+}

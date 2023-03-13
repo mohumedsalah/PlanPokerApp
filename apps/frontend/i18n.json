@@ -1,0 +1,11 @@
+{
+	"locales": ["en"],
+	"defaultLocale": "en",
+	"pages": {
+		"*": ["common"],
+		"/": ["home"],
+		"/sign-in": ["sign-in"],
+		"/app/pricing": ["pricing"],
+		"/thank-you": ["thank-you"]
+	}
+}
